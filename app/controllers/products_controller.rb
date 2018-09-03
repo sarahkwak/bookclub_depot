@@ -4,9 +4,6 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    if params[:notice] == "true"
-      flash[:notice] = "hello world #{view_context.link_to('google', @product)}".html_safe
-    end
     @products = Product.all
   end
 
@@ -60,6 +57,8 @@ class ProductsController < ApplicationController
     @product.destroy
     respond_to do |format|
       format.js
+      format.html { redirect_to products_url, notice: 'Project was successfully destroyed.' }
+      format.json { head :no_content }
     end
   end
 

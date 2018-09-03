@@ -1,8 +1,8 @@
 30.times {
-  Product.create(
-    title: Faker::FamilyGuy.character,
-    price: rand(1000).to_i,
+  Project.create(
+    name: Faker::App.name,
+    duration: rand(100),
     description: Faker::FamilyGuy.quote,
-    image_url: Faker::Avatar.image("my-own-slug", "50x50", "bmp")
+    owner: Faker::FamilyGuy.character
   )
 }
