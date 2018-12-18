@@ -1,14 +1,16 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: [:show, :edit, :update, :destroy]
+  include CurrentCart
 
-  # GET /products
-  # GET /products.json
+  before_action :set_product, only: [:show, :edit, :update, :destroy]
+  before_action :set_cart
+
+  # GET /products/1
+  # GET /products/1.json
+
   def index
     @products = Product.all
   end
 
-  # GET /products/1
-  # GET /products/1.json
   def show
   end
 
@@ -57,7 +59,7 @@ class ProductsController < ApplicationController
     @product.destroy
     respond_to do |format|
       format.js
-      format.html { redirect_to products_url, notice: 'Project was successfully destroyed.' }
+      format.html { redirect_to store_index_url, notice: 'Project was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

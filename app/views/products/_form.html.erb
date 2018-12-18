@@ -19,8 +19,12 @@
   </div>
 
   <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
+    <%= form.radio_button :description, "food" %>
+    <%= form.label :description, "food - this is text", value: "food" %>
+    <%= form.radio_button :description, "beauty" %>
+    <%= form.label :description, "beauty - test what", value: "beauty" %>
+    <%= form.radio_button :description, "fashion" %>
+    <%= form.label :description, "fashion -fsdf", value: "fasion" %>
   </div>
 
   <div class="field">
