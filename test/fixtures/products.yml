@@ -9,3 +9,8 @@ two:
   title: MyString and it's too hopefully not short
   description: MyText
   price: 9.99
+
+ruby:
+  title: 99 Bottles
+  description: Sandi Metz is amazing person
+  price: 19.99

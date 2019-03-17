@@ -1,12 +1,8 @@
 30.times {
-  Project.create(
-    name: Faker::App.name,
-    duration: rand(10000),
+  Product.create(
+    title: Faker::App.name,
     description: Faker::FamilyGuy.quote,
-    owner: Faker::FamilyGuy.character
+    price: rand(10000),
+    image_url: ""
   )
-}
-
-3.times {
-  Cart.create()
 }

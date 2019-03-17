@@ -1,5 +1,6 @@
 class CartsController < ApplicationController
   include CurrentCount
+  skip_before_action :authorize
   before_action :set_cart, only: [:show, :edit, :update, :destroy, :index]
   after_action :initialize_counter, only: [:update]
   rescue_from ActiveRecord::RecordNotFound, with: :invalid_cart
