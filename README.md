@@ -1,24 +1,3 @@
-# README
+![friendly rails bookclub](https://img00.deviantart.net/9297/i/2017/082/1/9/3_cutes_best_friends_by_0arrowthunder0-db3a6o4.jpg)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This is rails bookclub with 3 friends, following agile-web-developlemnt-with-rails-5
